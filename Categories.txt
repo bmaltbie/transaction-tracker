@@ -1,0 +1,5 @@
+T90_Weapons Noxious_staff Noxious_scythe Noxious_longbow Off-hand_Ascension_crossbow
+Rares Purple_partyhat Green_partyhat Yellow_partyhat Red_partyhat
+Dyes Barrows_Dye Blood_dye Ice_dye Shadow_Dye Third-Age_Dye
+Test Super_ranging_potion_(3) Tribal_pet_token Vial Bronze_arrow Bronze_kiteshield Bronze_dragon_mask Armadyl_boots Grimy_harralander Cooked_chicken Bread Unpowered_orb Redberries Dormant_Anima_Core_body Dormant_Zaros_godsword Dormant_anima_core_body_shard Super_prayer_renewal_potion_(6) Berserker_ring
+T92_Weapons Staff_of_Sliske Seren_godbow Zaros_godsword Wand_of_the_praesul

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TransactionTrackerController">
+   <top>
+      <GridPane prefHeight="36.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="492.6723937988281" minWidth="10.0" prefWidth="65.88736724853516" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="954.448356628418" minWidth="10.0" prefWidth="934.6126327514648" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <MenuBar fx:id="menuBar" maxWidth="90.0" minWidth="90.0" prefHeight="40.0" prefWidth="90.0">
+               <menus>
+                  <Menu fx:id="fileMenu" mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" onAction="#aboutMenuItemPressed" text="About..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="addAccountMenuItem" mnemonicParsing="false" onAction="#addAccountMenuItemPressed" text="Add account..." />
+                        <MenuItem fx:id="addCategoryMenuItem" mnemonicParsing="false" onAction="#addCategoryMenuItemPressed" text="Add category..." />
+                        <MenuItem fx:id="addItemMenuItem" mnemonicParsing="false" onAction="#addItemMenuButtonPressed" text="Add item..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="editAbbreviationMenuItem" mnemonicParsing="false" onAction="#editAbbreviationMenuItemPressed" text="Edit abbreviation..." />
+                        <MenuItem fx:id="editAccountMenuItem" mnemonicParsing="false" onAction="#editAccountMenuItemPressed" text="Edit account..." />
+                        <MenuItem fx:id="editCategoryMenuItem" mnemonicParsing="false" onAction="#editCategoryMenuItemPressed" text="Edit category..." />
+                        <MenuItem fx:id="editItemMenuItem" mnemonicParsing="false" onAction="#editItemMenuItem" text="Edit item..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="saveMenuItem" mnemonicParsing="false" onAction="#saveMenuItemPressed" text="Save" />
+                        <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" onAction="#exitMenuItemPressed" text="Exit" />
+                     </items>
+                  </Menu>
+               </menus>
+               <padding>
+                  <Insets left="6.0" top="4.0" />
+               </padding>
+            </MenuBar>
+            <ToolBar prefHeight="564.0" prefWidth="935.0" GridPane.columnIndex="1">
+               <items>
+                  <ChoiceBox fx:id="categoryChoiceBox" prefHeight="5.0" prefWidth="150.0" style="-fx-background-color: LIGHTGREY;" translateY="-1.0" />
+                  <ChoiceBox fx:id="itemChoiceBox" prefHeight="5.0" prefWidth="150.0" style="-fx-background-color: LIGHTGREY;" translateY="-1.0" />
+                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeButtonPressed" prefHeight="5.0" style="-fx-background-color: LIGHTGREY;" text="Home" translateY="-1.0" />
+                  <Button fx:id="newBuyButton" mnemonicParsing="false" onAction="#newBuyButtonPressed" prefHeight="5.0" style="-fx-background-color: LIGHTGREY;" text="New Buy" translateY="-1.0" />
+                  <Button fx:id="quickBuyButton" mnemonicParsing="false" onAction="#quickBuyButtonPressed" prefHeight="5.0" text="Quick Buy" />
+                  <Button fx:id="historyButton" mnemonicParsing="false" onAction="#historyButtonPressed" prefHeight="5.0" style="-fx-background-color: LIGHTGREY;" text="History" translateY="-1.0" />
+                  <Button fx:id="investmentsButton" mnemonicParsing="false" onAction="#investmentsButtonPressed" prefHeight="5.0" text="Investments" />
+               </items>
+            </ToolBar>
+         </children>
+      </GridPane>
+   </top>
+</BorderPane>

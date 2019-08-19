@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="historySceneController">
+   <top>
+      <HBox prefHeight="57.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <RadioButton fx:id="viewAllRadioButton" mnemonicParsing="false" selected="true" text="View all">
+               <padding>
+                  <Insets left="40.0" top="25.0" />
+               </padding>
+               <toggleGroup>
+                  <ToggleGroup fx:id="view" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="viewCustomRadioButton" mnemonicParsing="false" text="View custom:" toggleGroup="$view">
+               <padding>
+                  <Insets left="25.0" right="5.0" top="25.0" />
+               </padding>
+            </RadioButton>
+            <TextField fx:id="viewCustomTextField" disable="true" translateY="20.0" />
+            <ChoiceBox fx:id="profitChoiceBox" prefHeight="27.0" prefWidth="125.0" style="-fx-background-color: LIGHTGREY;" translateX="250.0" translateY="20.0" />
+            <Label text="Profit:" translateX="260.0" translateY="25.0" />
+            <Label fx:id="profitLabel" text="#" translateX="265.0" translateY="25.0" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <TableView fx:id="historyTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="accountColumn" prefWidth="103.0" text="Account" />
+          <TableColumn fx:id="dateColumn" prefWidth="145.0" style="-fx-alignment: CENTER;" text="Date" />
+            <TableColumn fx:id="quantityColumn" prefWidth="81.0" style="-fx-alignment: CENTER;" text="Quantity" />
+            <TableColumn fx:id="itemColumn" prefWidth="239.0" style="-fx-alignment: CENTER;" text="Item" />
+            <TableColumn fx:id="buyPriceColumn" prefWidth="130.0" style="-fx-alignment: CENTER;" text="Price bought" />
+            <TableColumn fx:id="sellPriceColumn" prefWidth="130.0" style="-fx-alignment: CENTER;" text="Price sold" />
+            <TableColumn fx:id="profitColumn" prefWidth="126.0" style="-fx-alignment: CENTER;" text="Profit" />
+        </columns>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="10.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="15.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+</BorderPane>

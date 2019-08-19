@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="buySceneController">
+   <top>
+      <GridPane prefHeight="39.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="917.2386779785156" minWidth="10.0" prefWidth="723.258056640625" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="486.3449401855469" minWidth="10.0" prefWidth="277.241943359375" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="38.96553421020508" minHeight="10.0" prefHeight="38.96553421020508" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="itemNameLabel" text="Item Name">
+               <font>
+                  <Font name="System Font Bold" size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="54.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Button fx:id="rswikiButton" mnemonicParsing="false" onAction="#rswikiButtonPressed" style="-fx-background-color: LIGHTGREY;" text="RS Wiki" translateX="-70.0" translateY="3.0" />
+                  <Button fx:id="geButton" mnemonicParsing="false" onAction="#geButtonPressed" style="-fx-background-color: LIGHTGREY;" text="Grand Exchange" translateX="-55.0" translateY="3.0" />
+                  <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#refreshButtonPressed" style="-fx-background-color: LIGHTGREY;" text="Refresh" translateY="3.0" />
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="333.93109130859375" minWidth="10.0" prefWidth="191.3113250732422" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="415.6886749267578" minWidth="10.0" prefWidth="254.5" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="488.5" minWidth="10.0" prefWidth="488.5" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="177.8966064453125" minHeight="0.0" prefHeight="46.362144470214844" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="483.6550750732422" minHeight="10.0" prefHeight="483.6550750732422" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TableView fx:id="recentHistoryTable" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="420.0" translateX="50.0" translateY="-10.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+              <columns>
+                <TableColumn fx:id="dateColumn" maxWidth="140.0" prefWidth="140.0" style="-fx-alignment: CENTER;" text="Date" />
+                <TableColumn fx:id="buyPriceColumn" maxWidth="140.0" prefWidth="140.0" style="-fx-alignment: CENTER;" text="Buy Price" />
+                  <TableColumn fx:id="sellPriceColumn" maxWidth="140.0" prefWidth="140.0" style="-fx-alignment: CENTER;" text="Sell Price" />
+              </columns>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </TableView>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Account" translateX="55.0" translateY="5.0" />
+                  <ChoiceBox fx:id="accountChoiceBox" prefWidth="120.0" style="-fx-background-color: LIGHTGREY;" translateX="55.0" translateY="9.0" />
+                  <Label text="Recent History" translateX="51.0" translateY="44.0">
+                     <font>
+                        <Font name="System Font Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" />
+            <GridPane GridPane.columnIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="156.93106079101562" minWidth="10.0" prefWidth="93.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.25845336914062" minWidth="10.0" prefWidth="194.5" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Quantity" translateY="2.0">
+                     <padding>
+                        <Insets left="2.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Buy Price" translateY="1.0" GridPane.columnIndex="1">
+                     <padding>
+                        <Insets left="2.0" />
+                     </padding>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="326.0" GridPane.rowIndex="2">
+                     <children>
+                        <Label text="Buy limit:  " translateY="5.0">
+                           <padding>
+                              <Insets left="2.0" />
+                           </padding>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="quantityTextField" prefWidth="63.0" text="1" translateY="2.0" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="buyLimitLabel" text="#" translateX="-30.0" />
+                     </children></HBox>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <TextField fx:id="buyPriceTextField" layoutY="3.0" maxWidth="109.0" prefHeight="27.0" prefWidth="100.0" />
+                        <Button fx:id="addButton" layoutX="115.0" layoutY="3.0" minWidth="50.0" mnemonicParsing="false" onAction="#addButtonPressed" prefWidth="40.0" style="-fx-background-color: LIGHTGREY;" text="Add" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.413818359375" minWidth="10.0" prefWidth="183.51751708984375" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.48248291015625" minWidth="10.0" prefWidth="268.48248291015625" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="152.8966064453125" minHeight="0.0" prefHeight="63.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="434.5" minHeight="10.0" prefHeight="373.5" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="336.4810485839844" minHeight="10.0" prefHeight="70.5" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                     <children>
+                        <HBox prefHeight="29.0" prefWidth="226.0">
+                           <children>
+                              <Label text="30-day change: " translateX="40.0">
+                                 <font>
+                                    <Font name="System Font Bold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="17.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="_30DayPriceLabel" text="+0%" translateX="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="41.0" prefWidth="226.0">
+                           <children>
+                              <Label text="90-day change: " translateX="40.0">
+                                 <font>
+                                    <Font name="System Font Bold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="17.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="_90DayPriceLabel" text="+0%" translateX="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="180-day change: " translateX="40.0">
+                                 <font>
+                                    <Font name="System Font Bold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="_180DayPriceLabel" text="+0%" translateX="40.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <LineChart fx:id="geLineChart" alternativeRowFillVisible="false" maxHeight="353.0" maxWidth="478.0" prefHeight="353.0" prefWidth="425.0" style="-fx-background-color: transparent;" styleClass=".chart-legend" title="G.E. Market Graph" translateX="-15.0" verticalGridLinesVisible="false" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yAxis" label="Price (GP)" side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="G.E. price: " translateX="40.0">
+                                 <font>
+                                    <Font name="System Font Bold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="gePriceLabel" text="2,147,483,647" translateX="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="180-day high: " translateX="40.0">
+                                 <padding>
+                                    <Insets left="7.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="geHighLabel" text="2,147,483,647" translateX="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="180-day low: " translateX="40.0">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="13.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="geLowLabel" text="2,147,483,647" translateX="40.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

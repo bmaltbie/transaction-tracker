@@ -1,0 +1,6 @@
+TomSawyer 1 Dormant_Anima_Core_body 5/2/18 9:40 AM 6 false 0
+TomSawyer 1 Dormant_anima_core_body_shard 5/2/18 9:40 AM 5 false 0
+TomSawyer 1 Super_ranging_potion_(3) 5/2/18 9:38 AM 200 false 0
+BillyBob 5 Noxious_scythe 3/18/18 8:30 PM 200500 false 0
+BillyBob 5 Noxious_scythe 3/18/18 8:30 PM 200500 false 0
+TomSawyer 2 Noxious_longbow 3/17/18 3:09 AM 142123123 false 0
