@@ -1,6 +1,11 @@
 # transaction-tracker
 Java / JavaFX app with GUI to track finances and stock market in Runescape (video game)
 
+TO COMPILE: javac -cp gson-2.8.2.jar:okhttp-3.10.0.jar:okio-1.14.0.jar *.java
+
+TO RUN: java -classpath gson-2.8.2.jar:okhttp-3.10.0.jar:okio-1.14.0.jar: TransactionTracker
+
+
 The tool bar at the top of the screen allows the User to select items based on grouping and quickly switch between different screens through provided buttons. It also is there the Menu is available through the 'File' button
 
 
